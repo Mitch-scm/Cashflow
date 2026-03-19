@@ -1,0 +1,27 @@
+# Secrets and credentials
+.env
+service_account.json
+*.key
+*.pem
+credentials.json
+token.json
+
+# Financial data
+*.pdf
+*.csv
+*.xlsx
+*.xls
+*.ofx
+*.qbo
+*.qfx
+statements/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
