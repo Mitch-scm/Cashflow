@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cash Flow Report</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; padding: 30px; color: #333; }
+    h1 { text-align: center; margin-bottom: 5px; font-size: 24px; }
+    .date { text-align: center; color: #666; margin-bottom: 25px; font-size: 14px; }
+    .container { max-width: 900px; margin: 0 auto; }
+
+    .section { background: #fff; border-radius: 8px; margin-bottom: 20px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .section-title { font-size: 16px; font-weight: 700; color: #1a73e8; border-bottom: 2px solid #1a73e8; padding-bottom: 8px; margin-bottom: 12px; }
+
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; font-size: 11px; text-transform: uppercase; color: #888; padding: 6px 10px; border-bottom: 1px solid #e0e0e0; }
+    th.num { text-align: right; }
+    td { padding: 8px 10px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    td.label { color: #555; }
+    tr:last-child td { border-bottom: none; }
+
+    .total-row td { font-weight: 700; border-top: 2px solid #333; border-bottom: none; padding-top: 10px; }
+    .highlight { background: #e8f5e9; }
+    .negative { color: #d32f2f; }
+    .positive { color: #2e7d32; }
+
+    .summary-box { background: #1a73e8; color: #fff; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 20px; }
+    .summary-box .amount { font-size: 32px; font-weight: 700; }
+    .summary-box .subtitle { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+
+    .input-field { background: #fffde7; border: 1px dashed #f9a825; padding: 2px 6px; border-radius: 3px; font-size: 13px; width: 100px; text-align: right; }
+    .tag { font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 600; }
+    .tag-auto { background: #e3f2fd; color: #1565c0; }
+    .tag-manual { background: #fff3e0; color: #e65100; }
+    .tag-pdf { background: #f3e5f5; color: #7b1fa2; }
+    .tag-calc { background: #e8f5e9; color: #2e7d32; }
+  </style>
+</head>
+<body>
+
+  <h1>Cash Flow Report</h1>
+  <p class="date">As of March 19, 2026</p>
+
+  <div class="container">
+
+    <!-- Summary -->
+    <div class="summary-box">
+      <div class="amount">$3,853.39</div>
+      <div class="subtitle">Excess Cash / Add Fund</div>
+    </div>
+
+    <!-- Cash Balances -->
+    <div class="section">
+      <div class="section-title">Cash Balances</div>
+      <table>
+        <tr>
+          <th>Account</th>
+          <th class="num">Local Currency</th>
+          <th class="num">USD</th>
+          <th>Source</th>
+        </tr>
+        <tr>
+          <td>Wells Fargo</td>
+          <td class="num">—</td>
+          <td class="num">$29,545.00</td>
+          <td><span class="tag tag-auto">QBO</span></td>
+        </tr>
+        <tr>
+          <td>Ping Pong CAD</td>
+          <td class="num">CA$753.50</td>
+          <td class="num">$550.25</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+        <tr>
+          <td>Ping Pong EUR</td>
+          <td class="num">€249.35</td>
+          <td class="num">$287.74</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+        <tr>
+          <td>Ping Pong GBP</td>
+          <td class="num">£868.00</td>
+          <td class="num">$1,159.00</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+        <tr>
+          <td>Wise GBP</td>
+          <td class="num">£2,584.00</td>
+          <td class="num">$3,450.30</td>
+          <td><span class="tag tag-auto">QBO</span></td>
+        </tr>
+        <tr>
+          <td>Wise EUR</td>
+          <td class="num">€319.00</td>
+          <td class="num">$368.12</td>
+          <td><span class="tag tag-auto">QBO</span></td>
+        </tr>
+        <tr class="total-row">
+          <td>Available Cash</td>
+          <td class="num"></td>
+          <td class="num positive">$35,360.41</td>
+          <td><span class="tag tag-calc">Calc</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Recurring Expenses -->
+    <div class="section">
+      <div class="section-title">Recurring Expenses</div>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th class="num">Amount (USD)</th>
+          <th>Due Date</th>
+          <th>Source</th>
+        </tr>
+        <tr>
+          <td>SBA Loan</td>
+          <td class="num">—</td>
+          <td>Mar 04</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+        <tr>
+          <td>3PL Winner</td>
+          <td class="num">$411.00</td>
+          <td>Mar 05</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+        <tr>
+          <td>Kendrew</td>
+          <td class="num">$0.00</td>
+          <td>—</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+        <tr class="total-row">
+          <td>Total</td>
+          <td class="num">$411.00</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Credit Cards -->
+    <div class="section">
+      <div class="section-title">Credit Cards</div>
+      <table>
+        <tr>
+          <th>Card</th>
+          <th class="num">Balance (USD)</th>
+          <th>Due Date</th>
+          <th>Source</th>
+        </tr>
+        <tr>
+          <td>Capital One</td>
+          <td class="num">—</td>
+          <td>Mar 05</td>
+          <td><span class="tag tag-pdf">PDF</span></td>
+        </tr>
+        <tr>
+          <td>Chase Ink 0889</td>
+          <td class="num">$10,552.00</td>
+          <td>Mar 05</td>
+          <td><span class="tag tag-pdf">PDF</span></td>
+        </tr>
+        <tr>
+          <td>Chase Ink 4719</td>
+          <td class="num">$4,480.00</td>
+          <td>Mar 05</td>
+          <td><span class="tag tag-pdf">PDF</span></td>
+        </tr>
+        <tr>
+          <td>Chase Hyatt 4462</td>
+          <td class="num">$14,311.00</td>
+          <td>Mar 09</td>
+          <td><span class="tag tag-pdf">PDF</span></td>
+        </tr>
+        <tr class="total-row">
+          <td>Total</td>
+          <td class="num">$29,343.00</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Payroll -->
+    <div class="section">
+      <div class="section-title">Payroll</div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th class="num">PHP</th>
+          <th class="num">USD</th>
+          <th>Source</th>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+        <tr>
+          <td>Cleaners</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+        <tr>
+          <td>Mischelle</td>
+          <td class="num">₱63,932.40</td>
+          <td class="num">$1,070.25</td>
+          <td><span class="tag tag-calc">Calc</span></td>
+        </tr>
+        <tr>
+          <td>Frances</td>
+          <td class="num">₱18,936.12</td>
+          <td class="num">$317.00</td>
+          <td><span class="tag tag-calc">Calc</span></td>
+        </tr>
+        <tr>
+          <td>June</td>
+          <td class="num">₱21,850.08</td>
+          <td class="num">$365.78</td>
+          <td><span class="tag tag-calc">Calc</span></td>
+        </tr>
+        <tr class="total-row">
+          <td>Total</td>
+          <td class="num"></td>
+          <td class="num">$1,753.02</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-title">Summary</div>
+      <table>
+        <tr>
+          <td>Available Cash</td>
+          <td class="num positive">$35,360.41</td>
+        </tr>
+        <tr>
+          <td>Total Cash Out</td>
+          <td class="num negative">($31,507.02)</td>
+        </tr>
+        <tr class="total-row">
+          <td>Excess Cash / Add Fund</td>
+          <td class="num positive">$3,853.39</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Suppliers -->
+    <div class="section">
+      <div class="section-title">Suppliers</div>
+      <table>
+        <tr>
+          <th>Supplier</th>
+          <th class="num">Amount</th>
+          <th>Notes</th>
+          <th>Source</th>
+        </tr>
+        <tr>
+          <td>Zhou Yun</td>
+          <td class="num">—</td>
+          <td>thru Charles Schwab</td>
+          <td><span class="tag tag-manual">Manual</span></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
