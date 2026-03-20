@@ -88,4 +88,4 @@ def calculate():
 
 if __name__ == "__main__":
     print("Cash Flow server running at http://localhost:5000")
-    app.run(port=5000, debug=True)
+    app.run(port=5000, debug=False)

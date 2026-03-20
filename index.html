@@ -91,7 +91,7 @@
       </tr>
       <tr class="zhou">
         <td>Pay to Zhou Yun</td>
-        <td class="r ed" contenteditable="true" id="zhou-yun" style="background:#fff;">0.00</td>
+        <td class="r val" id="zhou-yun" style="background:#fff;"></td>
       </tr>
       <tr>
         <td colspan="2" class="currency">thru Charles Schwab</td>
@@ -104,42 +104,42 @@
     <tr><td class="section">Available Cash</td><td></td><td></td></tr>
     <tr>
       <td>Wells Fargo</td>
-      <td class="r ed" contenteditable="true" data-cash-usd>0.00</td>
+      <td class="r ed" contenteditable="true" data-cash-usd></td>
       <td></td>
     </tr>
     <tr>
       <td>Ping Pong USD</td>
-      <td class="r ed" contenteditable="true" data-cash-usd>0.00</td>
+      <td class="r ed" contenteditable="true" data-cash-usd></td>
       <td></td>
     </tr>
     <tr>
       <td>undeposited Amazon remittance</td>
-      <td class="r ed" contenteditable="true" data-cash-usd>0.00</td>
+      <td class="r ed" contenteditable="true" data-cash-usd></td>
       <td></td>
     </tr>
     <tr>
       <td>Ping Pong CAD</td>
-      <td class="r ed" contenteditable="true" data-cash-cad>0.00</td>
+      <td class="r ed" contenteditable="true" data-cash-cad></td>
       <td class="currency">CAD</td>
     </tr>
     <tr>
       <td>Ping Pong EUR</td>
-      <td class="r ed" contenteditable="true" data-cash-eur>0.00</td>
+      <td class="r ed" contenteditable="true" data-cash-eur></td>
       <td class="currency">EUR</td>
     </tr>
     <tr>
       <td>Ping Pong GBP</td>
-      <td class="r ed" contenteditable="true" data-cash-gbp>0.00</td>
+      <td class="r ed" contenteditable="true" data-cash-gbp></td>
       <td class="currency">GBP</td>
     </tr>
     <tr>
       <td>Wise GBP</td>
-      <td class="r ed" contenteditable="true" data-cash-gbp>0.00</td>
+      <td class="r ed" contenteditable="true" data-cash-gbp></td>
       <td class="currency">GBP</td>
     </tr>
     <tr>
       <td>Wise EUR</td>
-      <td class="r ed" contenteditable="true" data-cash-eur>0.00</td>
+      <td class="r ed" contenteditable="true" data-cash-eur></td>
       <td class="currency">EUR</td>
     </tr>
 
@@ -149,24 +149,24 @@
     <tr><td class="section">Recurring Expenses</td><td></td><td></td></tr>
     <tr>
       <td>SBA Loan</td>
-      <td class="r" data-outlay>7,968.00</td>
+      <td class="r" data-outlay>7,968</td>
       <td id="sba-due"></td>
     </tr>
     <tr>
       <td>3PL Winner</td>
-      <td class="r ed" contenteditable="true" data-outlay>0.00</td>
+      <td class="r ed" contenteditable="true" data-outlay></td>
       <td class="ed" contenteditable="true"></td>
     </tr>
 
     <!-- Credit Cards -->
     <tr id="cc-capital-one">
       <td>Capital One</td>
-      <td class="r ed" contenteditable="true" data-cc>0.00</td>
+      <td class="r ed" contenteditable="true" data-cc></td>
       <td class="ed" contenteditable="true"></td>
     </tr>
     <tr id="cc-8537">
       <td>Chase 8537</td>
-      <td class="r ed" contenteditable="true" data-cc>0.00</td>
+      <td class="r ed" contenteditable="true" data-cc></td>
       <td class="ed" contenteditable="true"></td>
     </tr>
     <tr id="cc-0889">
@@ -186,24 +186,24 @@
     </tr>
     <tr id="cc-wf-credit">
       <td>Wells Fargo Credit Line</td>
-      <td class="r ed" contenteditable="true" data-cc>0.00</td>
+      <td class="r ed" contenteditable="true" data-cc></td>
       <td class="ed" contenteditable="true"></td>
     </tr>
     <tr id="cc-amex">
       <td>Amex Hilton</td>
-      <td class="r ed" contenteditable="true" data-cc>0.00</td>
+      <td class="r ed" contenteditable="true" data-cc></td>
       <td class="ed" contenteditable="true"></td>
     </tr>
 
     <!-- Other USD expenses -->
     <tr>
       <td>Jamie</td>
-      <td class="r ed" contenteditable="true" data-outlay>0.00</td>
+      <td class="r ed" contenteditable="true" data-outlay></td>
       <td class="ed" contenteditable="true"></td>
     </tr>
     <tr>
       <td>Cleaners</td>
-      <td class="r ed" contenteditable="true" data-outlay>0.00</td>
+      <td class="r ed" contenteditable="true" data-outlay></td>
       <td class="ed" contenteditable="true"></td>
     </tr>
 
@@ -221,7 +221,7 @@
     <tr><td class="section">Foreign Currencies</td><td></td><td></td></tr>
     <tr>
       <td>Kendrew</td>
-      <td class="r ed" contenteditable="true" id="kendrew">0.00</td>
+      <td class="r ed" contenteditable="true" id="kendrew"></td>
       <td class="currency">CAD</td>
     </tr>
 
@@ -232,6 +232,26 @@
       <td class="section">Payroll</td>
       <td class="r" id="payroll-php"></td>
       <td class="currency">PHP</td>
+    </tr>
+
+    <tr class="total-row"><td colspan="3"></td></tr>
+
+    <!-- Pay to Yun -->
+    <tr><td class="section">Pay to Yun</td><td></td><td></td></tr>
+    <tr>
+      <td class="ed" contenteditable="true" data-yun-label style="background:#fff;"></td>
+      <td class="r ed" contenteditable="true" data-yun-amt style="background:#fff;"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="ed" contenteditable="true" data-yun-label style="background:#fff;"></td>
+      <td class="r ed" contenteditable="true" data-yun-amt style="background:#fff;"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="ed" contenteditable="true" data-yun-label style="background:#fff;"></td>
+      <td class="r ed" contenteditable="true" data-yun-amt style="background:#fff;"></td>
+      <td></td>
     </tr>
   </table>
 
@@ -254,6 +274,11 @@
   }
 
   function fmt(n) {
+    if (n === 0) return '';
+    return n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function fmt2(n) {
     if (n === 0) return '';
     return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
@@ -306,6 +331,11 @@
     // Payroll (PHP)
     const payrollPHP = (monThu * 10 * 399.58) + (monFri * 8 * 510);
     document.getElementById('payroll-php').textContent = fmt(payrollPHP);
+
+    // Pay to Yun → sum into header zhou-yun box
+    let yunTotal = 0;
+    document.querySelectorAll('[data-yun-amt]').forEach(el => yunTotal += num(el));
+    document.getElementById('zhou-yun').textContent = yunTotal === 0 ? '' : fmt2(yunTotal);
 
     // Available Cash by currency
     let cashUSD = 0;
@@ -363,7 +393,7 @@
     }
 
     const gbpEl = document.getElementById('excess-gbp');
-    gbpEl.textContent = excessGBP === 0 ? '0.00' : '\u00a3' + fmt(excessGBP);
+    gbpEl.textContent = excessGBP === 0 ? '0' : '\u00a3' + fmt(excessGBP);
     gbpEl.classList.remove('negative');
 
     const eurEl = document.getElementById('excess-eur');
@@ -398,8 +428,44 @@
     window.print();
   });
 
-  // Set initial SBA date and payroll on load
+  // --- localStorage persistence ---
+  function getEditableKey(el, idx) {
+    return el.id || el.getAttribute('data-cash-usd') !== null && 'cash-usd-' + idx
+      || el.getAttribute('data-cash-cad') !== null && 'cash-cad-' + idx
+      || el.getAttribute('data-cash-eur') !== null && 'cash-eur-' + idx
+      || el.getAttribute('data-cash-gbp') !== null && 'cash-gbp-' + idx
+      || el.getAttribute('data-outlay') !== null && 'outlay-' + idx
+      || el.getAttribute('data-cc') !== null && 'cc-' + idx
+      || 'ed-' + idx;
+  }
+
+  function saveAll() {
+    const data = {};
+    document.querySelectorAll('.ed[contenteditable="true"]').forEach((el, i) => {
+      const key = getEditableKey(el, i);
+      if (el.textContent.trim()) data[key] = el.textContent.trim();
+    });
+    localStorage.setItem('cashflow-data', JSON.stringify(data));
+  }
+
+  function loadAll() {
+    const raw = localStorage.getItem('cashflow-data');
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    document.querySelectorAll('.ed[contenteditable="true"]').forEach((el, i) => {
+      const key = getEditableKey(el, i);
+      if (data[key]) el.textContent = data[key];
+    });
+  }
+
+  // Save on every edit
+  document.addEventListener('input', function(e) {
+    if (e.target.classList.contains('ed')) saveAll();
+  });
+
+  // Load saved data, then set initial SBA date and payroll
   (function() {
+    loadAll();
     const picker = document.getElementById('month-picker');
     const [year, month] = picker.value.split('-').map(Number);
     const { monThu, monFri } = countWeekdays(year, month);
